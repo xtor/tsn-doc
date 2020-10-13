@@ -241,12 +241,15 @@ classes and how traffic classes map into hardware queues. Besides that, it
 also enables the user to configure the GCL for a given interface.
 
 TAPRIO supports three different modes:
-``* Pure software``: the schedule runs in software as part of the queuing discipline.
+
+* ``Pure software``: the schedule runs in software as part of the queuing discipline.
   Frames are transmitted to the hardware normally. It is the least deterministic choice.
+  
 * ``TxTime-assisted``: the schedule runs in software as in the pure software mode.
   Software will set the right launch time for the frames automatically before
   transmitting the frames to the hardware. The device needs to support the LaunchTime
   feature for it to work. TxTime-assisted mode effectively emulates the EST feature.
+  
 * ``Offload``: the schedule is handled by the hardware queues.
 
 
